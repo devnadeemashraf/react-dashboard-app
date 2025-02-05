@@ -117,7 +117,14 @@ module.exports = {
 ### 4. Setting Up Dev Server
 
 ```js
+const path = require("path");
+
 module.exports = {
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  },
   devServer: {
     port: 3000,
     static: "./dist",
@@ -131,7 +138,19 @@ module.exports = {
 To handle JavaScript and CSS files, I added module rules:
 
 ```js
+const path = require("path");
+
 module.exports = {
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  },
+  devServer: {
+    port: 3000,
+    static: "./dist",
+    hot: true,
+  },
   module: {
     rules: [
       {
@@ -151,9 +170,33 @@ module.exports = {
 ### 6. Adding Plugins & Resolving Extensions
 
 ```js
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  },
+  devServer: {
+    port: 3000,
+    static: "./dist",
+    hot: true,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/, // Process .js and .jsx files
+        exclude: /node_modules/,
+        use: "babel-loader",
+      },
+      {
+        test: /\.css$/, // Process CSS files
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "public", "index.html"),
@@ -204,6 +247,16 @@ react-dashboard-app/
 ### 1. `index.js`
 
 ```js
+/* 
+  This is the entry-point of our application.
+  It renders the main App component into the root element.
+
+  We start off by importing 'createRoot' from ReactDOM's Client file.
+  
+  Then, we import the App component.
+  
+  Finally, we render the App component into the root element by targetting the 'root' div present in the index.html file.
+*/
 import { createRoot } from "react-dom/client";
 import App from "./App";
 
@@ -222,6 +275,7 @@ root.render(<App />);
     <title>React Dashboard Application</title>
   </head>
   <body>
+    <!-- This is the div that holds everything -->
     <div id="root"></div>
   </body>
 </html>
