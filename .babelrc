@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic" // 👈 This enables auto-import of React at run-time
+      }
+    ]
+  ]
+}
