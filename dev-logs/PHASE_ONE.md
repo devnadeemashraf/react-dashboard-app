@@ -294,4 +294,4 @@ At this stage, the project is set up with:
 
 This setup serves as a strong foundation for building the React dashboard application.
 
-> _Next up: Setting up React components and state management._
+> _Next up: Understanding the Problem Statement & coming up with a Plan._

@@ -9,5 +9,6 @@ You can read more about the [challenge](./CHALLENGE.md) here.
 ## Phases of the Project
 
 1. [Phase One - Setting Up the Project](./dev-logs/PHASE_ONE.md)
+1. [Phase Two - Project Planning](./dev-logs/PHASE_TWO.md)
 
-> _Next up: Phase Two - Setting up React components and state management._
+> _Next up: Remaining Project Setup and MirageJS Server Configuration - The Game Begins!._

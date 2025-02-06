@@ -12,15 +12,15 @@ Build a dashboard for monitoring IoT sensor data from 10,000+ devices in real-ti
 
 - [ ] **Mirage JS Server Configuration**
   - Mock API endpoints for:
-  - Initial dataset load (10k records)
-  - Real-time update stream
-  - Search/filter endpoints
+    - Initial dataset load (10k records)
+    - Real-time update stream
+    - Search/filter endpoints
 - [ ] **Data Modeling**
   - Generate realistic fake data with:
-  - Device ID (UUIDv4)
-  - Geo-coordinates
-  - Nested sensor readings
-  - Timestamped metrics
+    - Device ID (UUIDv4)
+    - Geo-coordinates
+    - Nested sensor readings
+    - Timestamped metrics
 - [ ] **Pagination & Infinite Scroll**
   - Implement cursor-based pagination
   - Scroll restoration functionality
