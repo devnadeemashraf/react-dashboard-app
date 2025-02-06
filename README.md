@@ -4,7 +4,7 @@ This was a frontend challenge that I asked **Deepseek r1** to generate for me to
 
 This is a real-time dashboard, _with no backend but a mock MirageJS server_, application that handles large datasets efficiently. I have optimized it to perform seamlessly even with over **10,000 rows** of data.
 
-You can read more about the [challenge](./CHALLENGE.md) here.
+You can read more about the challenge [here](./CHALLENGE.md).
 
 ## Phases of the Project
 
