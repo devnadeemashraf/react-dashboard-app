@@ -142,11 +142,11 @@ Updating _"Status"_ in real-time is really simple but to test my skills I will t
      [Heatmap Legend] 0-25°C ░▒▓██ 26-50°C
 ```
 
-This was, as the name says, a Heatmap and I had never built anything like this before so I was excited to work on this, and a little scared too. (_Scared of, maybe ditching the project because of the complexity of this component or the other components in general_).
+This was, as the name says, a Heatmap and I had never built anything like this before so I was excited to work on this.
 
-At this point of time, I had no idea how I would tackle that but I was sure that I would be using **Leaflet API** for this or some other similar service that allows me to generate a Heatmap, or maybe something simpler than that?.
+At this point of time, I knew I had to look up a lot of examples about these different components to truly understand the exact look and fell. About the Heatmap, I had no idea how I would tackle that but I was sure that I would be using **Leaflet API** for this or some other similar service that allows me to generate a Heatmap, or maybe something similar?.
 
-**Deepseek r1** ended up with a simple flow of control for the applicaiton which cleared a lot of doubts in my head and it all started to make sense.
+Lastly, **Deepseek r1** ended up with a simple flow of control for the applicaiton which cleared a lot of doubts in my head and it all started to make sense.
 
 ![React Dashboard Control Flow](image_phase_one_control_flow.png)
 
@@ -170,10 +170,11 @@ sequenceDiagram
 At this stage, I felt confident as:
 
 - I had a clear idea of the problem statement.
-- Data Structure for the devices and the update payload was clear to me.
-- API Mockups for the components were clear to me.
-- Control Flow of the Application was clear to me.
+- Data Structure for the devices and the update payload was clear.
+- API Mockups for the components were clear.
+- Layout and Components of the Dashboard were clear.
+- Control Flow of the Application was clear.
 
-I still had a lot of questions regarding implementations and code modularity and I was sure that I would be able to answer them as I go along.
+I still had a lot of questions regarding implementations and code modularity and I was sure that I would be able to answer them as I go along. I just need a good clean start with proper separation of concerns and I was sure I would be able to tackle this project.
 
 > _Next up: Remaining Project Setup and MirageJS Server Configuration._
