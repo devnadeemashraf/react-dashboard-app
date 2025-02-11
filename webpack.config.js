@@ -1,5 +1,7 @@
 const path = require("path");
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -36,15 +38,48 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
+
+      /**
+       * Here the rule is defined only for the CSS Modules to work with .scss extension
+       */
+      {
+        test: /\.module\.scss$/, // Targets only *.module.scss files
+        use: [
+          "style-loader", // MiniCssExtractPlugin.loader for Production
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[name]__[local]--[hash:base64:5]", // Custom naming convention for CSS Modules
+              },
+            },
+          },
+          "sass-loader",
+        ],
+      },
+
+      /**
+       * This rule is defined to handle the scss files. It uses the sass-loader, css-loader, and style-loader to load the scss file.
+       */
+      {
+        test: /\.scss$/,
+        exclude: /\.module\.scss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
     ],
   },
   /**
    * This Object is used to define the plugins that webpack should use. It supports an array of plugins. The different Plugins supported are as follows:
    * 1. HtmlWebpackPlugin: This plugin is used to generate an HTML file that includes the script tag to include the bundle.js file.
+   * 2. MiniCssExtractPlugin: This plugin is used to extract the CSS into a separate file. This is used to avoid the flash of unstyled content.
    */
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "public", "index.html"),
+    }),
+
+    new MiniCssExtractPlugin({
+      filename: "[name].[contenthash].css",
     }),
   ],
   /**
