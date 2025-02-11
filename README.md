@@ -9,6 +9,7 @@ You can read more about the challenge [here](./CHALLENGE.md).
 ## Phases of the Project
 
 1. [Phase One - Setting Up the Project](./dev-logs/PHASE_ONE.md)
-1. [Phase Two - Project Planning](./dev-logs/PHASE_TWO.md)
+2. [Phase Two - Project Planning](./dev-logs/PHASE_TWO.md)
+3. [Phase Three - Mock Server & React-Aria Setup](./dev-logs/PHASE_THREE.md)
 
-> _Next up: Remaining Project Setup and MirageJS Server Configuration - The Game Begins!._
+> _Next up: Component Design and Architecture._
