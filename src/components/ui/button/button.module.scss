@@ -4,18 +4,37 @@
 */
 .btn {
   display: inline-block;
+  font-size: var(--font-size-xs);
+  padding: var(--space-xs) var(--space-sm);
+
+  &--large {
+    font-size: var(--font-size-lg);
+    padding: var(--space-md) var(--space-xl);
+  }
 
   &--primary {
-    background-color: #007bff;
-    color: #fff;
-    border: 1px solid #007bff;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background-color: hsl(var(--color-primary));
+    color: hsl(var(--color-primary-foreground));
+
+    border-radius: var(--radius-md);
+    border: none;
+
+    transition: background-color var(--transition-fast);
     cursor: pointer;
-    transition: background-color 0.3s ease;
 
     &:hover {
-      background-color: #0056b3;
+      background-color: hsl(var(--color-primary-hover));
+    }
+
+    &:active {
+      border: none;
+      background-color: hsl(var(--color-primary-active));
+      outline: 1px solid hsl(var(--color-primary-active));
+    }
+
+    &:disabled {
+      background-color: hsl(var(--color-muted));
+      cursor: not-allowed;
     }
   }
 }

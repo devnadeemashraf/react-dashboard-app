@@ -86,6 +86,13 @@ module.exports = {
    * This Object is used to define the extensions that webpack should resolve. This is used to avoid specifying the extension of the file while importing the file.
    */
   resolve: {
-    extensions: [".js", ".jsx"],
+    alias: {
+      /**
+       * This is used to define the alias for the path. This is used to avoid the relative path while importing the file.
+       * Example: import Button from "../../components/ui/button"; can be written as import Button from "@/components/ui/button";
+       */
+      "@": path.resolve(__dirname, "src"),
+    },
+    extensions: [".js", ".jsx", ".json"],
   },
 };

@@ -1,0 +1,27 @@
+.metrics {
+  position: absolute;
+
+  margin: var(--space-md);
+  padding-inline: var(--space-md);
+  padding-block: var(--space-sm);
+
+  border-radius: var(--radius-md);
+
+  background-color: hsla(var(--color-foreground), 0.2);
+  color: hsla(var(--color-background));
+
+  cursor: grab;
+  user-select: none;
+
+  transition: var(--transition-color-fast), top 350ms ease-in-out,
+    left 350ms ease-in-out; /* Smooth transition for top and left */
+
+  &:hover {
+    background-color: hsla(var(--color-foreground), 1);
+    color: hsla(var(--color-background));
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+}
